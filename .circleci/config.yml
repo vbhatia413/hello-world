@@ -24,8 +24,6 @@ jobs:
     steps:
       - run: echo "World!"
 
-
-  print_world:
 workflows:
   # Name the workflow "welcome"
   welcome:
