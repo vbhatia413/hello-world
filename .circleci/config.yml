@@ -23,6 +23,7 @@ jobs:
 
     steps:
       - run: echo "World!"
+      - run: echo $builder_name
 
 workflows:
   # Name the workflow "welcome"
