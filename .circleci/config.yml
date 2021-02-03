@@ -38,9 +38,8 @@ jobs:
     working_directory: ~/
 
     steps:
-      - run: |
-          echo "Hello World" > /tmp/output.txt
-          return 1
+      - run: echo "Hello World" > /tmp/output.txt
+      - run: return 1
       - run:
           name: Print on failure
           command: echo "I have run after failure"
