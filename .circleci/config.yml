@@ -38,7 +38,13 @@ jobs:
     working_directory: ~/
 
     steps:
-      - run: echo "Hello World" > /tmp/output.txt
+      - run: |
+          echo "Hello World" > /tmp/output.txt
+          return 1
+      - run:
+          name: Print on failure
+          command: echo "I have run after failure"
+          when: on_fail
       - persist_to_workspace:
           root: /tmp
           paths:
